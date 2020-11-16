@@ -12,10 +12,10 @@ public class Lista02_Q08
 		/* variable */
 		double num;
 		/* input */
-		System.out.println("\nEntre com o número: ");
+		System.out.println("\nEntre com o nÃºmero: ");
 		num = read.nextDouble();
 		/* output */
-		if (num < 100) 
+		if (num <= 100) 
 		{
 			System.out.println("\n0.");
 		} else {
