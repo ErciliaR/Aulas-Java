@@ -8,7 +8,7 @@ public class Lista03_Q02
 	{
 		Scanner read = new Scanner(System.in);
 		/* variables */
-		String [] username={"MARCELO", "CAMILA", "ERCILIA"};
+		String [] username={"MARCELO", "CAMILLA", "ERCILIA"};
 		int [] password={1234, 4321, 0000};
 		String user;
 		int num_password;
@@ -20,17 +20,12 @@ public class Lista03_Q02
 		num_password = read.nextInt();
 		/* calculate and output */
 		for(int i = 0; i < username.length; i++)
-		{
 			if (user.equals(username[i]) && password[i]== num_password)
-			{ 
 				login = true;
-			} 
-		}
+ 		
 		if (login == true)
-		{
 			System.out.println("\nAcesso aprovado");
-		} else {
+		else
 			System.out.println("\nAcesso negado.");
-		}
 	}
 }
