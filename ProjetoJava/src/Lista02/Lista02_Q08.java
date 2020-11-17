@@ -15,7 +15,7 @@ public class Lista02_Q08
 		System.out.println("\nEntre com o número: ");
 		num = read.nextDouble();
 		/* output */
-		if (num < 100) 
+		if (num <= 100) 
 		{
 			System.out.println("\n0.");
 		} else {
