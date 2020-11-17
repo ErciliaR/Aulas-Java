@@ -22,8 +22,7 @@ public class Lista03_Q02
 		for(int i = 0; i < username.length; i++)
 			if (user.equals(username[i]) && password[i]== num_password)
 				login = true;
- 		
-		if (login == true)
+ 		if (login == true)
 			System.out.println("\nAcesso aprovado");
 		else
 			System.out.println("\nAcesso negado.");
