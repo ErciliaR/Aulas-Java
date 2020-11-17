@@ -15,7 +15,7 @@ public class Lista03_Q04
 		/* input */
 		while (faces < 3 || faces > 5)
 		{
-			System.out.println("\nEntre com o número de lados do polígono: ");
+			System.out.println("\nEntre com o número de lados do polígono regular: ");
 			faces = read.nextInt();
 		}
 		System.out.println("\nEntre com o lado do polígono em cm: ");
@@ -24,7 +24,7 @@ public class Lista03_Q04
 		switch (faces)
 		{
 			case 3:
-				System.out.println("\nTRIÂNGULO\n" + "A área do triângulo equilátero " + df.format(Math.sqrt(3)*Math.pow(side, 2)/4) + " cm2.");
+				System.out.println("\nTRIÂNGULO\n" + "A área do triângulo " + df.format(Math.sqrt(3)*Math.pow(side, 2)/4) + " cm2.");
 				break;
 			case 4:
 				System.out.println("\nQUADRADO\n" + "A área do quadrado " + df.format(Math.pow(side, 2)) + " cm2.");

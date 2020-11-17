@@ -26,12 +26,8 @@ public class Lista03_Q06
 		int [] n= {a,b,c};
 		/* calculate and output */
 		for (int i = 0; i < 3; i++ )
-		{
 			if (n[i] > great)
-			{
 				great=n[i];
-			}
-		}
 		System.out.println("\nO maior número inserido é " + df.format(great) + ".");
 	}
 }

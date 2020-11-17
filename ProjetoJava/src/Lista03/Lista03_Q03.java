@@ -17,12 +17,10 @@ public class Lista03_Q03
 		num = read.nextInt();
 		/* calculate and input */
 		if (num <= 0)
-		{
 			System.out.println("\nValor inválido.");
-		} else if(num > 0 && num < 12) {
+		else if (num > 0 && num < 12)
 			System.out.println("\nO valor total da compra é " + df.format(num*less) + " reais.");
-		} else {
+		else 
 			System.out.println("\nO valor total da compra é " + df.format(num*more) + " reais.");
-		}
 	}
 }

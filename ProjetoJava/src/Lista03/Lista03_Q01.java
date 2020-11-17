@@ -20,10 +20,8 @@ public class Lista03_Q01
 		}
 		/* calculate and output */
 		if (a > b)
-		{
-			System.out.println("\n O primeiro valor " + a + " é maior que o segundo valor " + b + ".");
-		} else {
-			System.out.println("\n O primeiro valor " + a + " é menor que o segundo valor " + b + ".");
-		}
+			System.out.println("\n O primeiro valor (" + a + ") é maior que o segundo valor (" + b + ").");
+		else
+			System.out.println("\n O primeiro valor (" + a + ") é menor que o segundo valor (" + b + ").");
 	}
 }
