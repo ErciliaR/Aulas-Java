@@ -8,7 +8,7 @@ public class Lista04_Q05
 	{
 		Scanner read = new Scanner(System.in);
 		/* variables */
-		int num, sum=0;
+		int num, sum=0, i=0;
 		/* input and calculate */
 		do 
 		{
@@ -16,10 +16,12 @@ public class Lista04_Q05
 			num = read.nextInt();
 			if (num < 0)
 				System.out.println("\nValor inválido.");
-			else
+			else if ((num % 3) == 0 && num != 0) {
 				sum += num;
+				i++;
+			}
 		} while (num != 0);
 		/* output */
-		System.out.println("\nA soma dos números: " + sum + ".");
+		System.out.println("\nA média dos números múltiplos de 3: " + (sum/i) + ".");
 	}
 }
