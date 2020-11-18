@@ -13,17 +13,18 @@ public class Lista04_Q10
 		do
 		{
 			System.out.println("\n"+ num +".");
-			num = num + 3;
+			num = num + 5;
 		} while (num < 300);
 		do
 		{
 			System.out.println("\n"+ num +".");
-			num = num + 5;
+			num = num + 3;
 		} while (num < 400);
 		do
 		{
 			System.out.println("\n"+ num +".");
-			num = num + 3;
-		} while (num < 457);
+			num = num + 5;
+		} while (num <= 456);
 	}
 }
+
