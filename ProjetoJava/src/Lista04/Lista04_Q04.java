@@ -14,6 +14,9 @@ public class Lista04_Q04
 		{
 			System.out.println("\nEntre com o número: ");
 			num = read.nextFloat();
+			if(num < 0 || num >9)
+				System.out.println("\nValor inválido.");
+			else
 			sum += num;
 		} while (num != 0);
 		/* output */
