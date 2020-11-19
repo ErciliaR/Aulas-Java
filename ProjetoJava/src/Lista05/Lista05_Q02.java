@@ -37,7 +37,7 @@ public class Lista05_Q02
 		{
 			for(int column = 0; column < 6; column++)
 				System.out.print("\t[" + m2[line][column] +"]\t");
-			System.out.println();
+			System.out.println(); 
 		}
 	}
 }

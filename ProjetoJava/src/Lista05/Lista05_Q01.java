@@ -15,7 +15,7 @@ public class Lista05_Q01
 		/* input and calculate */
 		for (int i = 0; i < 10; i++)
 		{
-			while (side[i] < 0)
+			while (side[i] < 0 || side[i] > 6)
 			{
 			System.out.println("\nEntre com o valor do lançamento " + (i+1) + ": ");
 			side[i] = read.nextInt();
