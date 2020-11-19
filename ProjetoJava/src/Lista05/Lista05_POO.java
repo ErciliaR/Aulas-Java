@@ -15,15 +15,12 @@ public class Lista05_POO
 		System.out.println("Métodos: dormir/acordar, correr/andar, sentar/ficar em pé, comer/beber, estudar. ");
 		System.out.println();
 		System.out.println("\nCASA:");
-<<<<<<< HEAD
 		System.out.println("O que �: tipo de moradia na qual uma pessoa ou mais pessoas habitam.");
 		System.out.println("Atributos: tamanho de terreno, cor, endere�o, taxa de IPTU, tipo (e.g: taipo, madeira, tijolos, concreto).");
 		System.out.println("M�todos: entrar/sair, limpar, pintar, reformar, adicionar m�veis, regularizar os documentos.");
-=======
 		System.out.println("O que é: tipo de moradia na qual uma pessoa ou mais pessoas habitam.");
 		System.out.println("Atributos: tamanho de terreno, cor, endereço, taxa de IPTU, tipo (e.g: taipo, madeira, tijolos, concreto).");
 		System.out.println("Métodos: dormir/acordar, correr/andar, sentar/ficar em pé, comer/beber, estudar.");
->>>>>>> 8c5b3c77a9305f6912165005df825d3907d36a1e
 		System.out.println();
 		System.out.println("\nCOMO ESSES OBJETOS INTERAGEM ENTRE SI:");
 		System.out.println("Uma pessoa pode residir em uma casa e usar um automóvel para percorrer longas e curtas distâncias, podendo ");
