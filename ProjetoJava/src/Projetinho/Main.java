@@ -18,14 +18,14 @@ public class Main
 		double total=0;
 		/* mapping */
 		Map<String, Peças> mapa = new TreeMap<String, Peças>();
-		Peças A1=new Peças ("A1","I9 10º Geração",15000);
-		Peças A2=new Peças ("A2","I7 10º Geração",15000);
-		Peças A3=new Peças ("A3","I5 10º Geração",15000);
-		Peças A4=new Peças ("A4","RTX 3090TI",50000);
-		Peças A5=new Peças ("A5","RTX 2080TI",12000);
-		Peças A6=new Peças ("A6","RTX 2060TI",2000);
-		Peças A7=new Peças ("A7","HDD 500GB + SSD nvme 500GB",1000);
-		Peças A8=new Peças ("A8","I9 10º Geração",15000);
+		Peças A1 = new Peças ("A1","I9 10º Geração",3000);
+		Peças A2 = new Peças ("A2","I7 10º Geração",4000);
+		Peças A3 = new Peças ("A3","I5 10º Geração",1500);
+		Peças A4 = new Peças ("A4","RTX 3090TI",5000);
+		Peças A5 = new Peças ("A5","RTX 2080TI",1200);
+		Peças A6 = new Peças ("A6","RTX 2060TI",2000);
+		Peças A7 = new Peças ("A7","HDD 500GB + SSD nvme 500GB",1000);
+		Peças A8 = new Peças ("A8","HDD 1T + SDD nvme 1T",3000); 
 		mapa.put("A1", A1);
 		mapa.put("A2", A2);
 		mapa.put("A3", A3);
@@ -41,7 +41,7 @@ public class Main
 			System.out.println(x);
 		/* client must add */
 		Collection<Peças> compra = new HashSet<Peças>();
-		while(i != 0 && i == 1) {
+		while(i == 1) {
 		System.out.println("Dentre as peças disponiveis, digite o ID da peças que deseja comprar:");
 		item = ler.next();
 		System.out.println("Quantas unidades");
@@ -58,12 +58,10 @@ public class Main
 			total += x.getValor()*x.getUnidades();
 		}
 		/* show total balance */
-		System.out.println("Valor total da compra: " + total + ".");
-			       
-			        
+		System.out.println("Valor total da compra: " + total + " R$.");
 		/* cofirmar compra */
 		
-		/* confirmar dados do cliente */
+		/* ENTRAR E confirmar dados do cliente */
 		
 		/* adradecer */
 		
