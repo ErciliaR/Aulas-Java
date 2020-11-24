@@ -5,16 +5,17 @@ public class Peças
 	/* attributes */
 	private String nome;
 	private double valor;
-	private int ID;
+	private String ID;
 	private int unidades;
 	/* constructor */
-	public Peças(int ID, String nome, double valor) {
-		super();
+	public Peças(String ID, String nome, double valor) {
 		this.nome = nome;
 		this.valor = valor;
 		this.ID = ID;
 	}
-	public Peças (int ID, int unidades) {
+	public Peças(String ID, String nome, double valor, int unidades) {
+		this.nome = nome;
+		this.valor = valor;
 		this.ID = ID;
 		this.unidades = unidades;
 	}
@@ -31,10 +32,10 @@ public class Peças
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public int getID() {
+	public String getID() {
 		return ID;
 	}
-	public void setID(int ID) {
+	public void setID(String ID) {
 		this.ID = ID;
 	}
 	public int getUnidades() {
@@ -44,11 +45,7 @@ public class Peças
 		this.unidades = unidades;
 	}
 	public String toString() {
-		return "ID: "+ID+"\tPeça: "+nome+"\tPreço: "+valor+" R$\n";
+		return "ID: "+ID+"\tPeça: "+nome+"\tPreço unitário: "+valor+" R$\n";
 	}
-	public double isBalance() {
-		
-	}
-	
 }
 
