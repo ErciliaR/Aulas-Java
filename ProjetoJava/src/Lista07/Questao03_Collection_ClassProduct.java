@@ -15,4 +15,17 @@ public class Questao03_Collection_ClassProduct
 	public String toString() {
 		return this.name + "\t" + this.quantity + "\t";
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
 }

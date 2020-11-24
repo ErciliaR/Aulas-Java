@@ -1,8 +1,8 @@
 package Lista07;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Questao03_Collections 
 {
@@ -10,13 +10,15 @@ public class Questao03_Collections
 	{
 		Scanner read = new Scanner(System.in);
 		
-		Set<Questao03_Collection_ClassProduct> storage = new HashSet<Questao03_Collection_ClassProduct>();
+		Collection<Questao03_Collection_ClassProduct> storage = new HashSet<Questao03_Collection_ClassProduct>();
 		int num=0, b;
 		String a;
+		
 		while (num<=0) {
-		System.out.println("Entre com o numéro total dos distintos produtos (NÃO A QUANTIDADE): ");
+		System.out.println("Entre com o numéro total dos produtos vedindos (NÃO A QUANTIDADE): ");
 		num = read.nextInt();
 		}
+		
 		for (int i=0; i< num; i++) {
 			System.out.println("Entre com o nome do produto: ");
 			a = read.next();
@@ -26,6 +28,8 @@ public class Questao03_Collections
 			storage.add(product);
 		}
 		read.close();
+		System.out.println(storage);
+		
 		System.out.println(storage);
 	}
 }
