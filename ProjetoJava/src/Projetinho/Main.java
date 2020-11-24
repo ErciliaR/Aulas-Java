@@ -53,10 +53,14 @@ public class Main
 		i = ler.nextInt();
 		}
 		/* show what client add */
-		for(Peças x:compra)
+		for(Peças x:compra) {
 			System.out.println(x + "\tQuantidade: " + x.getUnidades());
+			total += x.getValor()*x.getUnidades();
+		}
 		/* show total balance */
-		
+		System.out.println("Valor total da compra: " + total + ".");
+			       
+			        
 		/* cofirmar compra */
 		
 		/* confirmar dados do cliente */
