@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Cliente 
 {
+	private Scanner ler;
 	/* attributes */
 	private String nome;
     private String cpf;
@@ -20,7 +21,7 @@ public class Cliente
     }
     /* method to subscribe */
     public void Cadastro() {
-    	Scanner ler = new Scanner(System.in);
+    	ler = new Scanner(System.in);
     	System.out.println("Digite seu nome:");
 		this.nome = ler.next();
 		System.out.println("Digite seu CPF:");
@@ -31,13 +32,22 @@ public class Cliente
 		this.endereco = ler.next();
 	}
     /* method to confirm subscription */
-    public int ConfirmarCadastro() {
-    	Scanner ler = new Scanner(System.in);
+    public void ConfirmarCadastro() {
+    	ler = new Scanner(System.in);
     	System.out.println("CADASTRO:");
     	System.out.println(toString());
-    	System.out.println("Para confirmar cadastro pressione 1, caso contrario 0: ");
-    	int i = ler.nextInt();
-    	return i;
+    	int i=2;
+	    while(i!=1 && i!=0) {
+    	System.out.println("Para CONFIRMAR cadastro pressione 1, caso contrario 0: ");
+    	i = ler.nextInt();
+	    }
+	    switch(i) {
+		case 0: 
+    		System.out.println("\nVocê cancelou a operação... Que pena. Volte sempre!");
+    		System.exit(0);
+		case 1:
+    		System.out.println("\nVocê está quase lá... Proxima etapa é forma de pagamento. Obrigad@ por escolher a nossa loja!!");
+    	}
     }
     /* method toString */
     @Override
