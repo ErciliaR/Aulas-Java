@@ -59,13 +59,10 @@ public class Pedido
 		System.out.println("Valor total da compra: " + total + " R$.");
 		}
 		/* method to confirm items */
-		public void Confirmar() {
+		public int Confirmar() {
 	    Scanner ler = new Scanner(System.in);
 		System.out.println("Se voce deseja confirmar lista de compra pressione 1, caso contrario 0: ");
 		int i = ler.nextInt();
-    	if(i == 1) 
-    		System.out.println("CADASTRO CONFIRMADO:");
-    	else 
-    		System.out.println("CADASTRO NEGADO");
-    	}
+		return i;
+		}
 }

@@ -31,18 +31,13 @@ public class Cliente
 		this.endereco = ler.next();
 	}
     /* method to confirm subscription */
-    public boolean ConfirmarCadastro() {
+    public int ConfirmarCadastro() {
     	Scanner ler = new Scanner(System.in);
     	System.out.println("CADASTRO:");
     	System.out.println(toString());
     	System.out.println("Para confirmar cadastro pressione 1, caso contrario 0: ");
     	int i = ler.nextInt();
-    	boolean status;
-    	if(i == 1) 
-    		status = true;
-    	else 
-    		status = false;
-    	return status;
+    	return i;
     }
     /* method toString */
     @Override
