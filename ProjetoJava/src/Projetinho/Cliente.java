@@ -1,5 +1,7 @@
 package Projetinho;
 
+import java.util.Scanner;
+
 public class Cliente 
 {
 	/* attributes */
@@ -14,7 +16,41 @@ public class Cliente
         this.fone = fone;
         this.endereco = endereco;
     }
-    /* methods */
+    public Cliente() {
+    }
+    /* method to subscribe */
+    public void Cadastro() {
+    	Scanner ler = new Scanner(System.in);
+    	System.out.println("Digite seu nome:");
+		this.nome = ler.next();
+		System.out.println("Digite seu CPF:");
+		this.cpf = ler.next();
+		System.out.println("Digite seu telefone:");
+		this.fone = ler.next();
+		System.out.println("Digite seu endereço:");
+		this.endereco = ler.next();
+	}
+    /* method to confirm subscription */
+    public boolean ConfirmarCadastro() {
+    	Scanner ler = new Scanner(System.in);
+    	System.out.println("CADASTRO:");
+    	System.out.println(toString());
+    	System.out.println("Para confirmar cadastro pressione 1, caso contrario 0: ");
+    	int i = ler.nextInt();
+    	boolean status;
+    	if(i == 1) 
+    		status = true;
+    	else 
+    		status = false;
+    	return status;
+    }
+    /* method toString */
+    @Override
+    public String toString() {
+        return "cliente: " + nome + ", cpf: " + cpf 
+        + ", fone: " + fone + ", endereco: " + endereco + ".";
+    }
+    /* methods (getters and setters) */
     public String getNome() {
         return nome;
     }
@@ -38,10 +74,5 @@ public class Cliente
     }
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-    @Override
-    public String toString() {
-        return "cliente: " + getNome() + ", cpf: " + getCpf() 
-        + ", fone: " + getFone() + ", endereco: " + getEndereco() + ".";
     }
 }
