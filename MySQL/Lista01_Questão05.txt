@@ -1,0 +1,57 @@
+
+-- criando banco de dados
+create database db_hr_service;
+
+-- criando tabela de funcionarios
+create table tb_students(
+code_student int(2) auto_increment,
+name_student varchar (30) not null,
+n1 decimal(3,1),
+n2 decimal(3,1),
+media decimal(3,1) generated always as ((n1 + n2)/2),
+primary key (code_student)
+);
+
+-- inserindo população
+insert into tb_students (name_student, n1, n2) value ("Luiz Oliveira", 7, 8.2);
+insert into tb_students (name_student, n1, n2) value ("Amanda Oliveira", 6, 6.5);
+insert into tb_students (name_student, n1, n2) value ("José Silva", 9, 10);
+insert into tb_students (name_student, n1, n2) value ("Maria Silva", 8, 7.5);
+insert into tb_students (name_student, n1, n2) value ("Guilherme Perreira", 2, 6.4);
+insert into tb_students (name_student, n1, n2) value ("Larissa Perreira", 5.7, 7);
+insert into tb_students (name_student, n1, n2) value ("Rafael Silva", 8, 9.9);
+insert into tb_students (name_student, n1, n2) value ("Beatriz Perreira", 7.9, 10);
+insert into tb_students (name_student, n1, n2) value ("Valeria Correia", 3, 4.5);
+insert into tb_students (name_student, n1, n2) value ("Paula Correia", 10, 10);
+insert into tb_students (name_student, n1, n2) value ("Gabriel Ferraz", 7.5, 8.9);
+insert into tb_students (name_student, n1, n2) value ("Lorena Ferraz", 7.6, 9.5);
+insert into tb_students (name_student, n1, n2) value ("Frida Assis", 10, 9.5);
+insert into tb_students (name_student, n1, n2) value ("Nina Assis", 7.6, 8);
+insert into tb_students (name_student, n1, n2) value ("Marcelo Barbosa", 10, 10);
+insert into tb_students (name_student, n1, n2) value ("Oliver Ferraz", 7.5, 8.9);
+insert into tb_students (name_student, n1, n2) value ("Mateus Ferraz", 7.6, 9.5);
+insert into tb_students (name_student, n1, n2) value ("Tinga Assis", 10, 9.5);
+insert into tb_students (name_student, n1, n2) value ("Leo Assis", 7.6, 8);
+insert into tb_students (name_student, n1, n2) value ("Vitor Barbosa", 10, 10);
+
+-- visualizando alteração da tabela
+select * from tb_students;
+
+-- retornando apenas media maior ou igual a 7
+select * from tb_students where media >= 7;
+
+-- retornando apenas media menor que 7
+select * from tb_students where media < 7;
+
+-- deletando dado
+delete from tb_students where media < 7;
+
+-- visualizando alteração da tabela
+select * from tb_students;
+
+-- atualizando dado da tabela
+update tb_students set n2= 10 where name_student = 'Rafael Silva';
+
+-- visualizando alteração da tabela
+select * from tb_students;
+

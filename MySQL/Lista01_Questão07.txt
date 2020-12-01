@@ -1,0 +1,55 @@
+
+-- criando banco de dados
+create database db_blockbuster;
+
+-- criando tabela de funcionarios
+create table tb_movies(
+code_movies int(2) auto_increment,
+type_movie varchar (30) not null,
+name_movie varchar(30),
+year_out int(4),
+in_stock boolean,
+primary key (code_movies)
+);
+
+-- inserindo população
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) values ("comédia romântica", "Holydate", 2017, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comédia romântica", "My first kiss", 1992, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("romance", "Notebook", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Serpent", 2000, false);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("ation", "Spy", 1986, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comédia romântica", "Its a wonderfull life", 1986, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("Drama", "Speach",  2016, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("Horror", "Samara", 2010, false);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comédia romântica", "Losing a man in 10days", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Impossible mission I", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Impossible mission II", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Impossible mission III", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "John Wick I", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "John Wick II", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "John Wick III", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Matrix I", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Matrix II", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("action", "Matrix III", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comedia", "Hangover I", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comedia", "Hangover II", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("comedia", "Hangover III", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("adventure", "Lord of the ring I", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("adventure", "Lord of the ring II", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("adventure", "Lord of the ring III", 2000, true);
+insert into tb_movies (type_movie, name_movie, year_out, in_stock) value ("adventure", "Hobbit", 2000, true);
+
+-- visualizando alteração da tabela
+select * from tb_movies;
+
+-- retornando apenas filmes com nome começando em S
+select * from tb_movies where name_movie like 'S%';
+
+-- retornando apenas filmes de aventura
+select * from tb_movies where type_movie = 'adventure';
+
+-- deletando dado
+delete from tb_movies where in_stock = false;
+
+-- visualizando alteração da tabela
+select * from tb_movies;

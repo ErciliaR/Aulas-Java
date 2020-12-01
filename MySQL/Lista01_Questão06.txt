@@ -1,0 +1,51 @@
+
+-- criando banco de dados
+create database db_pet_shop;
+
+-- criando tabela de funcionarios
+create table tb_pets(
+code_pet int(2) auto_increment,
+type_pet varchar (30) not null,
+name_pet varchar(30),
+age int(3),
+weight decimal(10,2),
+primary key (code_pet)
+);
+
+-- inserindo população
+insert into tb_pets (type_pet, name_pet, age, weight) values ("Cachorro", "Luiz", 7, 8.2);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Amanda", 6, 6.5);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Papagaio", "José", 9, 10);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Maria", 8, 7.5);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Guilherme", 2, 6.4);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Larissa", 2, 6.4);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Rafael",  8, 9.9);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Beatriz", 7, 10);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Valeria",  3, 4.5);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Paula", 10, 10);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Gabriel", 7, 8.9);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Lorena", 7, 9.5);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Frida", 10, 9.5);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Nina", 7, 8);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Marcelo", 10, 10);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro", "Oliver", 7, 8.9);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Cachorro","Mateus", 7, 7.6);
+insert into tb_pets (type_pet, name_pet, age, weight) value ("Gato", "Tinga", 5, 10);
+
+-- visualizando alteração da tabela
+select * from tb_pets;
+
+-- retornando apenas animal com nome começando em B
+select * from tb_pets where name_pet like 'B%';
+
+-- atualizando dado da tabela
+update tb_pets set weight = 25 where age > 8;
+
+-- retornando apenas animal com peso maior que 20
+select * from tb_pets where weight > 20;
+
+-- deletando dado
+delete from tb_pets where type_pet = 'Papagaio';
+
+-- visualizando alteração da tabela
+select * from tb_pets;
