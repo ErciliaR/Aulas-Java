@@ -1,0 +1,46 @@
+
+-- criando banco de dados
+create database db_e_commerce;
+
+-- criando tabela de produtos
+create table tb_products(
+code_product int(2) auto_increment,
+name_product varchar (30) not null,
+price decimal(10,2),
+brand varchar(12),
+in_stock boolean,
+primary key (code_product)
+);
+
+-- inserindo população
+insert into tb_products (name_product, price, brand, in_stock) values ("TV", 2500.53, "LG", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("TV", 5008.18, "Samsung", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("MP4", 449.99, "Philco", false);
+insert into tb_products (name_product, price, brand, in_stock) values ("Ipod", 850.53, "Apple", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Tablet", 799.18, "Samsung", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Ipad", 2500.50, "Apple", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Home theater", 899.53, "LG", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Home theater", 499.18, "Samsung", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Notebook", 2798.50, "Acer", false);
+insert into tb_products (name_product, price, brand, in_stock) values ("Notebook", 1850.53, "Sumsung", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Notebook", 3600.18, "Dell", true);
+insert into tb_products (name_product, price, brand, in_stock) values ("Macbook", 10000.50, "Apple", true);
+
+
+-- visualizando alteração da tabela
+select * from tb_products;
+
+-- retornando apenas produtos com preço menor que 500
+select * from tb_products where price < 500;
+
+-- retornando apenas produtos com preço maior que 500
+select * from tb_products where price > 500;
+
+-- retornando apenas produtos com preço maior que 700 e menor que 900
+select * from tb_products where price >= 700 and price <= 900;
+
+-- deletando dado
+delete from tb_products where in_stock = false;
+
+-- visualizando alteração da tabela
+select * from tb_products;

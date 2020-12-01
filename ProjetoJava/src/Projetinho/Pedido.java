@@ -56,8 +56,8 @@ public class Pedido
 			total += x.getValor()*x.getUnidades();
 		}
 		/* show total balance */
-		System.out.println("Valor total da compra (FRETE GRÁTIS PRA TODO BRASIL): " + total + " R$.");  
-		System.out.println("A expectativa de entrega é de no máximo 30 dias.");
+		System.out.println("\nValor total da compra (FRETE GRÁTIS PRA TODO BRASIL): " + total + " R$.");  
+		System.out.println("A expectativa de entrega é de no máximo 30 dias.\n");
 		}
 		/* method to confirm items */
 	public void Confirmar() {

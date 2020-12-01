@@ -1,0 +1,58 @@
+
+-- criando banco de dados
+create database db_hr_service;
+
+-- criando tabela de funcionarios
+create table tb_workers(
+code_worker int(2) auto_increment,
+name_worker varchar (30) not null,
+age int(2),
+phone varchar(12),
+email varchar(50),
+primary key (code_worker)
+);
+
+-- inserindo população
+insert into tb_workers (name_worker, age, phone, email) value ("Luiz Oliveira", 22, "011999998888", "lg@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Amanda Oliveira", 26, "011999997777", null);
+insert into tb_workers (name_worker, age, phone, email) value ("José Silva", 32, "011999996666", "js@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Maria Silva", 18, null, "ms@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Guilherme Perreira", 40, "011999998989", null);
+insert into tb_workers (name_worker, age, phone, email) value ("Larissa Perreira", 24, "011999995555", "lp@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Rafael Silva", 19, null, null);
+insert into tb_workers (name_worker, age, phone, email) value ("Beatriz Perreira", 24, "011999994444", "bp@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Valeria Correia", 35, "011999993333", "vc@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Paula Correia", 27, null, "pc@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Gabriel Ferraz", 21, "011999992222", "gf@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Lorena Ferraz", 28, "011999991111", "lf@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Frida Assis", 20, "011999990101", "fa@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Nina Assis", 24, null, "na@gmail.com");
+insert into tb_workers (name_worker, age, phone, email) value ("Marcelo Barbosa", 30, null, "mb@gmail.com");
+
+-- adicionando coluna de salário
+alter table tb_workers add wage decimal(6, 2);
+
+-- visualizando alteração da tabela
+select * from tb_workers;
+
+-- inserindo salário na população 
+update tb_workers set wage = 1500.20 where code_worker < 8;
+update tb_workers set wage = 2500.20 where code_worker >= 8;
+
+-- visualizando alteração da tabela
+select * from tb_workers;
+
+-- retornando apenas salários menores que 2000
+select * from tb_workers where wage < 2000;
+
+-- retornando apenas salários maiores que 2000
+select * from tb_workers where wage > 2000;
+
+-- atualizando dado da tabela
+update tb_workers set wage = 9000.20 where code_worker = 15;
+
+-- deletando dado
+delete from tb_workers where code_worker = 7;
+
+-- visualizando alteração da tabela
+select * from tb_workers;

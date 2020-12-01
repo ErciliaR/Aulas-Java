@@ -5,7 +5,7 @@ public class Main
 	public static void main(String[] args)
 	{
 		/* show storage and ask for client list */
-		System.out.println("\nBEM VINDO A NOSSA LOJA!");
+		System.out.println("\nBEM VIND@ A NOSSA LOJA!");
 		Pedido pedido = new Pedido();
 		pedido.AdicionarItem();
 		/* ask for confirmation */
