@@ -1,0 +1,64 @@
+
+-- criando banco de dados
+create database db_e_commerce2;
+
+-- criando tabela de categoria
+create table tb_classes (
+code_class int(2) auto_increment,
+type_class varchar (30) not null,
+authorized boolean,
+primary key (code_class)
+);
+
+-- criando tabela de produtos
+create table tb_products(
+code_product int(2) auto_increment,
+name_product varchar (30) not null,
+price decimal(10,2),
+brand varchar(12),
+in_stock boolean,
+code_class_id int(2),
+primary key (code_product),
+foreign key (code_class_id) references tb_classes (code_class)
+);
+
+
+-- inserindo população de categoria
+insert into tb_classes (type_class, authorized) value ("Eletronicos", true);
+insert into tb_classes (type_class, authorized) value ("Material de limpeza", true);
+insert into tb_classes (type_class, authorized) value ("Cama, mesa e banho", true);
+insert into tb_classes (type_class, authorized) value ("Alimentos", true);
+insert into tb_classes (type_class, authorized) value ("Perfumaria", true);
+
+-- inserindo população de produtos
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("TV", 2789.00, "Samsung", true, 1);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("TV", 3789.00, "LG", true, 1);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Detergente", 8.00, "Yep", true, 2);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Detergente", 9.00, "Brilux", true, 2);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Toalha", 25.00, "Riachuelo", true, 3);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Toalha", 35.00, "Addidas", true, 3);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Arroz", 500.00, "Tio João", true, 4);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Arroz", 500.00, "Camil", true, 4);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Perfume bebe", 500.00, "J&J", true, 4);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Perfume 212", 500.00, "212", true, 4);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("TV", 5789.00, "Sony", true, 1);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("TV", 1789.00, "Philco", true, 1);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Desinfetante", 8.00, "Yep", true, 2);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Desinfetante", 9.00, "Brilux", true, 2);
+insert into tb_products (name_product, price, brand, in_stock, code_class_id) value ("Toalha", 50.00, "Nike", true, 3);
+
+-- retornando apenas produtos com preço maior que 2000
+select * from tb_products where price > 2000;
+
+-- retornando apenas produtos com preço maior que 1000 e menor que 2000
+select * from tb_products where price > 1000 and price < 2000;
+
+-- retornando apenas produtos com nome começando em C
+select * from tb_products where name_product like "C%";
+
+-- inner join
+select * from tb_products inner join tb_classes on tb_classes.code_class= tb_products.code_class_id
+
+-- retornando apenas produtos com classe Eletronicos
+select * from tb_products inner join tb_classes on tb_classes.code_class= tb_products.code_class_id where type_class = 'Eletronicos';
+
