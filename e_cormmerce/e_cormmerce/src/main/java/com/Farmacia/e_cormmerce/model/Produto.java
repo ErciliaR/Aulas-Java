@@ -1,9 +1,8 @@
 package com.Farmacia.e_cormmerce.model;
 
 
-import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,10 +27,11 @@ public class Produto {
 	
 	@NotBlank
 	@Min(0)
-	private float preco;
+	@Column(precision=6, scale=2)
+	private double preco;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnoreProperties
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
 	
 	/* methods */
@@ -47,7 +47,7 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public float getPreco() {
+	public double getPreco() {
 		return preco;
 	}
 	public void setPreco(float preco) {
