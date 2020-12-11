@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -27,6 +28,7 @@ public class Categoria {
 	@Size(min=2, max=100)
 	private String descricao;
 	
+	@NotNull
 	@Column(name="em_estoque")
 	private boolean ativo;
 	

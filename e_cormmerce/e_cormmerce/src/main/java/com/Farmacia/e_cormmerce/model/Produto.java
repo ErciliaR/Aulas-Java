@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -25,7 +26,7 @@ public class Produto {
 	@NotBlank
 	private String nome;
 	
-	@NotBlank
+	@NotNull
 	@Min(0)
 	@Column(precision=6, scale=2)
 	private double preco;

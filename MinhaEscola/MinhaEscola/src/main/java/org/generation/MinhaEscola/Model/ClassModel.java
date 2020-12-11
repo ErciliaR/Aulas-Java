@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -22,7 +23,7 @@ public class ClassModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
+	@NotBlank
 	@Size(min = 2 , max = 100)
 	private String classId;
 	
